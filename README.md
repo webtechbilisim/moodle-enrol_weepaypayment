@@ -1,10 +1,10 @@
 # enrol\_weepaypayment
 
-A plugin for [Moodle LMS](https://moodle.org) to use Weepay payments for course enrollments, developed by [WebTech Bilişim](mailto:info@webtechbilisim.com.tr)
+A plugin for [Moodle LMS](https://moodle.org) to use weepay payments for course enrollments, developed by [WebTech Bilişim](mailto:info@webtechbilisim.com.tr)
 
 ### Features
 
-  - Set up paid courses with Weepay payments
+  - Set up paid courses with weepay payments
   - Currency support (TRY, USD, EUR)
   - Limit max enrolled users
   - Default price and role settings
@@ -23,7 +23,7 @@ Plugin is also available at Moodle plugins directory, you may download it from t
 
 ### Known issues
 
-  - Weepay Sandbox Mode Coming Soon
+  - weepay Sandbox Mode Coming Soon
 
 ### License
 
