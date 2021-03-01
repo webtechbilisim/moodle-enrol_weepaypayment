@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Defines message providers (types of message sent) for the Weepay enrolment plugin.
+ * Defines message providers (types of message sent) for the weepay enrolment plugin.
  *
  * @package    enrol_weepaypayment
  * @copyright  2019 Dualcube Team

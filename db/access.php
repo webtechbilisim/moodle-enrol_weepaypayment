@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Capabilities for Weepay enrolment plugin.
+ * Capabilities for weepay enrolment plugin.
  *
  * @package    enrol_weepaypayment
  * @copyright  2019 Dualcube Team

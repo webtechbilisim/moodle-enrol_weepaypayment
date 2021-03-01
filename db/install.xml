@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <XMLDB PATH="enrol/weepaypayment/db" VERSION="20120122" COMMENT="XMLDB file for Moodle enrol/weepaypayment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
   <TABLES>
-    <TABLE NAME="enrol_weepaypayment" COMMENT="Holds all known information about Weepay transactions">
+    <TABLE NAME="enrol_weepaypayment" COMMENT="Holds all known information about weepay transactions">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
         <FIELD NAME="payment_id" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false"/>

@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Weepay enrolment plugin.
+ * weepay enrolment plugin.
  *
  * This plugin allows you to set up paid courses.
  * @package    enrol_weepaypayment
@@ -27,7 +27,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Weepay enrolment plugin implementation.
+ * weepay enrolment plugin implementation.
  * @copyright  2019 Dualcube Team
  * @copyright  2021 WebTech Bilişim
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later

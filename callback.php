@@ -51,7 +51,7 @@ function message_weepaypayment_error_to_admin($subject, $data)
         $message .= s($key) . " => " . s($value) . "\n";
     }
 
-    $subject = "Weepay PAYMENT ERROR: " . $subject;
+    $subject = "weepay PAYMENT ERROR: " . $subject;
     $fullmessage = $message;
     $fullmessagehtml = html_to_text('<p>' . $message . '</p>');
 
@@ -64,7 +64,7 @@ function message_weepaypayment_error_to_admin($subject, $data)
 
 $data = [];
 
-//  Weepay START
+//  weepay START
 $plugin = enrol_get_plugin('weepaypayment');
 
 require_once "weepay/weepayBootstrap.php";
