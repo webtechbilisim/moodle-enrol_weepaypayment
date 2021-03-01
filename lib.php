@@ -41,7 +41,7 @@ class enrol_weepaypayment_plugin extends enrol_plugin
     public function get_currencies()
     {
         // See https://github.com/weepay/weepay-php/blob/master/weepay/Model/Currency.php
-        $codes = array("TL", "EUR", "USD", "GBP");
+        $codes = array("TRY", "EUR", "USD", "GBP");
         $currencies = array();
         foreach ($codes as $c) {
             $currencies[$c] = new lang_string($c, 'core_currencies');
