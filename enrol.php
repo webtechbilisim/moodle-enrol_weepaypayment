@@ -86,12 +86,24 @@ $request->setOrderId($OrderID . "-" . $USER->id . "-" . $course->id . "-" . $ins
 $request->setIpAddress($USER->lastip);
 $request->setPrice($cost);
 $request->setCurrency(\weepay\Model\Currency::TL);
-$request->setLocale(\weepay\Model\Locale::TR);
 $request->setDescription('Moodle WeePay Payment Solution');
 //$request->setCallBackUrl($CFG->wwwroot . "/enrol/weepaypayment/callback.php");
 $request->setCallBackUrl($CFG->wwwroot . "/enrol/weepaypayment/callback.php?oid=".$OrderID . "-" . $USER->id . "-" . $course->id . "-" . $instance->id);
 $request->setPaymentGroup(\weepay\Model\PaymentGroup::PRODUCT);
 $request->setPaymentChannel(\weepay\Model\PaymentChannel::WEB);
+// Payment Language Selector
+if($USER->lang=='en')
+{
+	$request->setLocale(\weepay\Model\Locale::EN);
+}
+else if ($USER->lang=='tr')
+{
+	$request->setLocale(\weepay\Model\Locale::TR);
+}
+else // Otherwise Turkish
+{
+	$request->setLocale(\weepay\Model\Locale::TR);
+}
 
 //Customer
 $customer = new \weepay\Model\Customer();
@@ -138,7 +150,7 @@ $request->setProducts($Products);
 
 $checkoutFormInitialize = \weepay\Model\CheckoutFormInitialize::create($request, $options);
 
-echo "<div id='weePay-checkout-form' class='responsive'>";
+echo "<div id='weePay-checkout-form' class='responsive col-lg-6 col-md-12 col-sm-12' style='float:none; margin:auto;'>";
 
 if ($checkoutFormInitialize->getStatus() == 'success') {
 
