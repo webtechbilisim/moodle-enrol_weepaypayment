@@ -85,7 +85,6 @@ $request = new \weepay\Request\FormInitializeRequest();
 $request->setOrderId($OrderID . "-" . $USER->id . "-" . $course->id . "-" . $instance->id);
 $request->setIpAddress($USER->lastip);
 $request->setPrice($cost);
-$request->setCurrency(\weepay\Model\Currency::TL);
 $request->setDescription('Moodle WeePay Payment Solution');
 //$request->setCallBackUrl($CFG->wwwroot . "/enrol/weepaypayment/callback.php");
 $request->setCallBackUrl($CFG->wwwroot . "/enrol/weepaypayment/callback.php?oid=".$OrderID . "-" . $USER->id . "-" . $course->id . "-" . $instance->id);
@@ -103,6 +102,23 @@ else if ($USER->lang=='tr')
 else // Otherwise Turkish
 {
 	$request->setLocale(\weepay\Model\Locale::TR);
+}
+// Payment Currency Selector
+if($USER->lang=='TRY')
+{
+	$request->setCurrency(\weepay\Model\Currency::TL);
+}
+else if ($USER->lang=='EUR')
+{
+	$request->setCurrency(\weepay\Model\Currency::EUR);
+}
+else if ($USER->lang=='USD') 
+{
+	$request->setCurrency(\weepay\Model\Currency::USD);
+}
+else if ($USER->lang=='GBP') 
+{
+	$request->setCurrency(\weepay\Model\Currency::GBP);
 }
 
 //Customer
