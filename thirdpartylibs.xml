@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<libraries>
+  <library>
+    <location>weepay</location>
+    <name>weepay-php</name>
+    <license>MIT</license>
+  </library>
+</libraries>
