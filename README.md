@@ -5,11 +5,11 @@ A plugin for [Moodle LMS](https://moodle.org) to use weepay payments for course 
 ### Features
 
   - Set up paid courses with weepay payments
-  - Currency support (TRY, USD, EUR)
+  - Currency support (TRY, USD, EUR, GBP)
   - Limit max enrolled users
   - Default price and role settings
   - Enrollment duration limit option
-  - Turkish language support
+  - Turkish and English language support
 
 ### Installation
 
