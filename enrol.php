@@ -99,9 +99,9 @@ else if ($USER->lang=='tr')
 {
 	$request->setLocale(\weepay\Model\Locale::TR);
 }
-else // Otherwise Turkish
+else // Otherwise English
 {
-	$request->setLocale(\weepay\Model\Locale::TR);
+	$request->setLocale(\weepay\Model\Locale::EN);
 }
 // Payment Currency Selector
 if($USER->lang=='TRY')
