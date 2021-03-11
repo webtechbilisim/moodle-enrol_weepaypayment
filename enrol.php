@@ -86,7 +86,7 @@ $request->setOrderId($OrderID . "-" . $USER->id . "-" . $course->id . "-" . $ins
 $request->setIpAddress($USER->lastip);
 $request->setPrice($cost);
 $request->setDescription('Moodle WeePay Payment Solution');
-$request->setPaymentSource('MOODLE|WEBTECH_BILISIM|'.$CFG->version.'|'.$CFG->release);
+$request->setPaymentSource('MOODLE|WEBTECH_BILISIM|'.$CFG->version);
 $request->setCallBackUrl($CFG->wwwroot . "/enrol/weepaypayment/callback.php?oid=".$OrderID . "-" . $USER->id . "-" . $course->id . "-" . $instance->id);
 $request->setPaymentGroup(\weepay\Model\PaymentGroup::PRODUCT);
 $request->setPaymentChannel(\weepay\Model\PaymentChannel::WEB);

@@ -22,7 +22,7 @@
  * @copyright  2021 WebTech Bilişim
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+global $CFG, $USER;
 // Disable moodle specific debug messages and any errors in output,
 // comment out when debugging or better look into error log!
 define('NO_DEBUG_DISPLAY', true);
@@ -83,7 +83,19 @@ if ($plugin->get_config('sandboxmode')) {
 //Request
 $request = new \weepay\Request\GetPaymentRequest();
 $request->setOrderId($_GET['oid']);
-$request->setLocale(\weepay\Model\Locale::TR);
+// Payment Language Selector
+if($USER->lang=='en')
+{
+	$request->setLocale(\weepay\Model\Locale::EN);
+}
+else if ($USER->lang=='tr')
+{
+	$request->setLocale(\weepay\Model\Locale::TR);
+}
+else // Otherwise English
+{
+	$request->setLocale(\weepay\Model\Locale::EN);
+}
 
 $getPaymentRequest = \weepay\Model\GetPaymentRequestInitialize::create($request, $options);
 
