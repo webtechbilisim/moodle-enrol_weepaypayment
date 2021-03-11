@@ -104,21 +104,25 @@ else // Otherwise English
 	$request->setLocale(\weepay\Model\Locale::EN);
 }
 // Payment Currency Selector
-if($USER->lang=='TRY')
+if($plugin->get_config('currency')=='TRY')
 {
 	$request->setCurrency(\weepay\Model\Currency::TL);
 }
-else if ($USER->lang=='EUR')
+else if ($plugin->get_config('currency')=='EUR')
 {
 	$request->setCurrency(\weepay\Model\Currency::EUR);
 }
-else if ($USER->lang=='USD') 
+else if ($plugin->get_config('currency')=='USD') 
 {
 	$request->setCurrency(\weepay\Model\Currency::USD);
 }
-else if ($USER->lang=='GBP') 
+else if ($plugin->get_config('currency')=='GBP') 
 {
 	$request->setCurrency(\weepay\Model\Currency::GBP);
+}
+else
+{
+  $request->setCurrency(\weepay\Model\Currency::TL);
 }
 
 //Customer
